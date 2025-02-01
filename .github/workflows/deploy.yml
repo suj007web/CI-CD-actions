@@ -33,7 +33,7 @@ jobs:
         run: npm run build
 
       - name: Package application
-        run: tar --exclude=develop.tar -czvf develop.tar .
+        run: tar --exclude=develop.tar --ignore-failed-read -cvzf develop.tar -C . .
 
       - name: Upload artifact  
         uses: actions/upload-artifact@v4
