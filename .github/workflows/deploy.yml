@@ -92,5 +92,5 @@ jobs:
           username: ubuntu
           key: ${{ secrets.MY_SSH_KEY }}
           script: |
-            cd /home/ubuntu/demo
+            cd /home/ubuntu/
             pm2 start --name demo npm -- start      
