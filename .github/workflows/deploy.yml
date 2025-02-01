@@ -92,5 +92,7 @@ jobs:
           username: ubuntu
           key: ${{ secrets.MY_SSH_KEY }}
           script: |
-            cd /home/ubuntu/
+            export NVM_DIR="$HOME/.nvm"
+            [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+            cd /home/ubuntu/demo
             pm2 start --name demo npm -- start      
