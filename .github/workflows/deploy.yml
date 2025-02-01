@@ -30,9 +30,10 @@ jobs:
 
       - name : check disk space
         run : df -h
-        
-      - name : Package application 
-        run  : sudo tar --exclude=.git --exclude=develop.tar -cvzf develop.tar .
+
+      - name: Package application
+        run: sudo tar --exclude=develop.tar -cvzf develop.tar -C dist .
+
 
       - name : Upload artifact  
         uses  : actions/upload-artifact@v4
