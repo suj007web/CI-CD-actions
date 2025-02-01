@@ -95,4 +95,5 @@ jobs:
             export NVM_DIR="$HOME/.nvm"
             [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
             cd /home/ubuntu/demo
+            pm2 delete demo
             pm2 start --name demo npm -- start      
