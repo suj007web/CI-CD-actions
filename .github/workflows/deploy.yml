@@ -32,7 +32,7 @@ jobs:
         run : df -h
 
       - name: Package application
-        run: sudo tar --exclude=develop.tar -cvzf develop.tar -C  .
+        run: sudo tar --exclude=develop.tar --exclude=.git -cvzf develop.tar .
 
 
       - name : Upload artifact  
