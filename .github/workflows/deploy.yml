@@ -28,8 +28,11 @@ jobs:
       - name : Build project
         run : npm run build
 
+      - name : check disk space
+        run : df -h
+        
       - name : Package application 
-        run  : tar --exclude=.git --exclude=develop.tar -cvzf develop.tar .
+        run  : sudo tar --exclude=.git --exclude=develop.tar -cvzf develop.tar .
 
       - name : Upload artifact  
         uses  : actions/upload-artifact@v4
